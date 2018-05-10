@@ -21,3 +21,8 @@ class MsgPackRendererTestCase(TestCase):
         result = self.renderer.render(data)
 
         self.assertEqual(result, b'\x92\xa6value1\x81\xa3foo\xa3bar')
+
+    def test_render_no_data(self):
+        result = self.renderer.render(None)
+
+        self.assertEqual(result, '')

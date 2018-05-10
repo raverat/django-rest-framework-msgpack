@@ -2,6 +2,8 @@ from io import BytesIO
 
 from django.test import TestCase
 
+from rest_framework.exceptions import ParseError
+
 from rest_framework_msgpack.parsers import MsgPackParser
 
 
@@ -30,3 +32,6 @@ class MsgPackParserTestCase(TestCase):
         result = self.parser.parse(BytesIO(encoded_data))
 
         self.assertEqual(result, {'k': {'__class__': 'unknown', 'v': 1}})
+
+    def test_invalid_stream(self):
+        self.assertRaises(ParseError, self.parser.parse, '')
