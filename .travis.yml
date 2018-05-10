@@ -1,0 +1,25 @@
+sudo: false
+language: python
+cache: pip
+
+matrix:
+  fast_finish: true
+  include:
+    - python: 2.7
+      env: TOXENV=py27-dj18
+    - python: 2.7
+      env: TOXENV=py27-dj19
+    - python: 2.7
+      env: TOXENV=py27-dj110
+    - python: 2.7
+      env: TOXENV=py27-dj111
+
+install:
+  - pip install tox tox-travis
+
+after_success:
+  - pip install codecov
+  - codecov -e TOXENV,DJANGO
+
+script:
+  - tox
