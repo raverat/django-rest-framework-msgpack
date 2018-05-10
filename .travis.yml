@@ -6,13 +6,53 @@ matrix:
   fast_finish: true
   include:
     - python: 2.7
-      env: TOXENV=py27-dj18
+      env: TOXENV=py27-dj18-drf31
     - python: 2.7
-      env: TOXENV=py27-dj19
+      env: TOXENV=py27-dj18-drf32
     - python: 2.7
-      env: TOXENV=py27-dj110
+      env: TOXENV=py27-dj18-drf33
     - python: 2.7
-      env: TOXENV=py27-dj111
+      env: TOXENV=py27-dj18-drf34
+    - python: 2.7
+      env: TOXENV=py27-dj18-drf35
+    - python: 2.7
+      env: TOXENV=py27-dj18-drf36
+    - python: 2.7
+      env: TOXENV=py27-dj19-drf31
+    - python: 2.7
+      env: TOXENV=py27-dj19-drf32
+    - python: 2.7
+      env: TOXENV=py27-dj19-drf33
+    - python: 2.7
+      env: TOXENV=py27-dj19-drf34
+    - python: 2.7
+      env: TOXENV=py27-dj19-drf35
+    - python: 2.7
+      env: TOXENV=py27-dj19-drf36
+    - python: 2.7
+      env: TOXENV=py27-dj110-drf31
+    - python: 2.7
+      env: TOXENV=py27-dj110-drf32
+    - python: 2.7
+      env: TOXENV=py27-dj110-drf33
+    - python: 2.7
+      env: TOXENV=py27-dj110-drf34
+    - python: 2.7
+      env: TOXENV=py27-dj110-drf35
+    - python: 2.7
+      env: TOXENV=py27-dj110-drf36
+    - python: 2.7
+      env: TOXENV=py27-dj111-drf31
+    - python: 2.7
+      env: TOXENV=py27-dj111-drf32
+    - python: 2.7
+      env: TOXENV=py27-dj111-drf33
+    - python: 2.7
+      env: TOXENV=py27-dj111-drf34
+    - python: 2.7
+      env: TOXENV=py27-dj111-drf35
+    - python: 2.7
+      env: TOXENV=py27-dj111-drf36
 
 install:
   - pip install tox tox-travis
